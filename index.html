@@ -1,143 +1,171 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Login & Registration</title>
+  <title>Library Management - User Page</title>
   <style>
-  body {
+      body {
       font-family: Arial, sans-serif;
-      background-color: #f4f4f4;
+      background-image: url('images.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
     }
     .container {
-      max-width: 400px;
+      max-width: 800px;
       margin: 0 auto;
       padding: 20px;
-      background-color: #ffffff8f;
+      background-color: #ffffff4e;
       border-radius: 5px;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
       backdrop-filter: blur(0px);
-      margin-top: 100px;
+      margin-top: 50px;
     }
-    h2 {
+    h1 {
       text-align: center;
+      color: #333;
     }
-    .tab {
-      overflow: hidden;
-      margin-bottom: 20px;
+    .book-list {
+      margin-top: 20px;
+      border-collapse: collapse;
+      width: 100%;
     }
-    .tab button {
+    .book-list th,
+    .book-list td {
+      padding: 8px;
+      text-align: left;
+    }
+    .book-list th {
+      background-color: #f2f2f2;
+    }
+    .book-list tr:nth-child(even) {
+      background-color: #f9f9f9;
+    }
+    .book-list tr:hover {
+      background-color: #e9e9e9;
+    }
+    .filter-form {
+      margin-top: 20px;
+    }
+    .filter-form label {
+      font-weight: bold;
+      color: #333;
+    }
+    .filter-form input[type="text"],
+    .filter-form select {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      width: 750px;
+    }
+    .filter-form button {
+      padding: 6px 12px;
       background-color: #4CAF50;
-      color: white;
-      float: left;
       border: none;
-      outline: none;
+      color: #fff;
       cursor: pointer;
-      padding: 10px 20px;
-      margin-right: 5px;
       border-radius: 3px;
     }
-    .tab button:hover {
+    .filter-form button:hover {
       background-color: #45a049;
-    }
-    .tab button.active {
-      background-color: #45a049;
-    }
-    .tabcontent {
-      display: none;
-      padding: 20px;
-      border: 0px solid #ccc;
-      border-top: none;
-      border-radius: 0 0 5px 5px;
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <div class="tab">
-      <button class="tablinks active" onclick="openTab(event, 'userLogin')">User Login</button>
-      <button class="tablinks" onclick="openTab(event, 'adminLogin')">Admin Login</button>
-      <button class="tablinks" onclick="openTab(event, 'userRegistration')">User Registration</button>
-    </div>
+    <h1>Book Details</h1>
     
-    <div id="userLogin" class="tabcontent" style="display: block;">
-      <h2>User Login</h2>
-      <form action="user-login.php" method="POST">
-        <div class="form-group">
-          <label for="user-username">Username:</label>
-          <input type="text" id="user-username" name="user-username" required>
-        </div>
-        <div class="form-group">
-          <label for="user-password">Password:</label>
-          <input type="password" id="user-password" name="user-password" required>
-        </div>
-        <div class="form-group">
-          <a href="user.html">
-            <button type="submit">Login</type>
-          </a>
-        </div>
+    <div class="filter-form">
+      <form>
+        <label for="title">Title of the Book:</label>
+        <input type="text" id="title" name="title">
+        
+        <label for="author">Author:</label>
+        <input type="text" id="author" name="author">
+        
+        <label for="subject">Subject:</label>
+        <input type="text" id="subject" name="subject">
+        
+        <label for="publish-date">Publish Date:</label>
+        <input type="text" id="publish-date" name="publish-date">
+        
+        <button type="submit">Filter</button>
       </form>
     </div>
     
-    <div id="adminLogin" class="tabcontent">
-      <h2>Admin Login</h2>
-      <form action="admin-login.php" method="POST">
-        <div class="form-group">
-          <label for="admin-username">Username:</label>
-          <input type="text" id="admin-username" name="admin-username" required>
-        </div>
-        <div class="form-group">
-          <label for="admin-password">Password:</label>
-          <input type="password" id="admin-password" name="admin-password" required>
-        </div>
-        <div class="form-group">
-          <a href="admin.html">
-            <button type="submit">Login</type>
-          </a>
-        </div>
-      </form>
-    </div>
-    
-    <div id="userRegistration" class="tabcontent">
-      <h2>User Registration</h2>
-      <form action="user-registration.php" method="POST">
-        <div class="form-group">
-          <label for="new-username">Username:</label>
-          <input type="text" id="new-username" name="new-username" required>
-        </div>
-        <div class="form-group">
-          <label for="new-password">Password:</label>
-          <input type="password" id="new-password" name="new-password" required>
-        </div>
-        <div class="form-group">
-          <label for="confirm-password">Confirm Password:</label>
-          <input type="password" id="confirm-password" name="confirm-password" required>
-        </div>
-        <div class="form-group">
-          <button type="submit">Register</button>
-        </div>
-      </form>
-    </div>
-  </div>
+    <table class="book-list">
+      <thead>
+        <tr>
+          <th>Title</th>
+          <th>Author</th>
+          <th>Subject</th>
+          <th>Publish Date</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Code Complete</td>
+          <td>Steve McConnell</td>
+          <td>Programming</td>
+          <td>2023-05-15</td>
+        </tr>
+        <tr>
+            <td>Analog Electronics</td>
+            <td>L.K. MAHESWARI</td>
+            <td>Electronics</td>
+            <td>2022-08-25</td>
+          </tr>
+          <tr>
+            <td>Power System</td>
+            <td>C. L. Wadhwa</td>
+            <td>Electrical</td>
+            <td>2021-03-20</td>
+          </tr>
+          <tr>
+            <td> Clean Code</td>
+            <td>Robert C. Martin</td>
+            <td>Programming</td>
+            <td>2021-01-01</td>
+          </tr>
+          <tr>
+            <td>Electrical Machine</td>
+            <td>P. S. Bhimbra</td>
+            <td>Electrical</td>
+            <td>2020-10-10</td>
+          </tr>
+          <tr>
+            <td>Artificial Intelligence</td>
+            <td>Stuart Russell</td>
+            <td>Artificial Intelligence</td>
+            <td>2023-02-28</td>
+          </tr>
+          <tr>
+            <td>DSA in Python</td>
+            <td>H. Goldwasser</td>
+            <td>Computer Science</td>
+            <td>2022-09-10</td>
+          </tr>
+          <tr>
+            <td>Database Systems</td>
+            <td>Hector</td>
+            <td>Database Management</td>
+            <td>2021-07-15</td>
+          </tr>
+          <tr>
+            <td>Art of Electronics</td>
+            <td>Paul Horowitz</td>
+            <td>Electronics</td>
+            <td>2020-12-05</td>
+          </tr>
+          <tr>
+            <td>Operating System</td>
+            <td>B. Galvin</td>
+            <td>Operating Systems</td>
+            <td>2019-11-20</td>
+          </tr>
   
-  <script>
-    function openTab(evt, tabName) {
-      var i, tabcontent, tablinks;
-      
-      tabcontent = document.getElementsByClassName("tabcontent");
-      for (i = 0; i < tabcontent.length; i++) {
-        tabcontent[i].style.display = "none";
-      }
-      
-      tablinks = document.getElementsByClassName("tablinks");
-      for (i = 0; i < tablinks.length; i++) {
-        tablinks[i].className = tablinks[i].className.replace(" active", "");
-      }
-      
-      document.getElementById(tabName).style.display = "block";
-      evt.currentTarget.className += " active";
-    }
+      </tbody>
+    </table>
     
-    // Open the default tab on page load
-    document.getElementById("userLogin").style.display = "block";
-  </script>
+  </div>
 </body>
 </html>
+
