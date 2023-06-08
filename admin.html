@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Library Management - Admin Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-image: url('images.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #ffffff4e;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      backdrop-filter: blur(0px);
+      margin-top: 50px;
+    }
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+    h3 {
+      text-align: center;
+      color: #333;
+    }
+    .book-list {
+      margin-top: 20px;
+      border-collapse: collapse;
+      width: 100%;
+    }
+    .book-list th,
+    .book-list td {
+      padding: 8px;
+      text-align: left;
+    }
+    .book-list th {
+      background-color: #f2f2f2;
+    }
+    .book-list tr:nth-child(even) {
+      background-color: #f9f9f9;
+    }
+    .book-list tr:hover {
+      background-color: #e9e9e9;
+    }
+    .add-book-form {
+      margin-top: 20px;
+    }
+    .add-book-form label {
+      font-weight: bold;
+      color: #333;
+    }
+    .add-book-form input[type="text"],
+    .add-book-form select {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      width: 750px;
+    }
+    .add-book-form button {
+      padding: 6px 12px;
+      background-color: #4CAF50;
+      border: none;
+      color: #fff;
+      cursor: pointer;
+      border-radius: 3px;
+    }
+    .add-book-form button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Library Management - Admin Page</h1>  
+    <div class="add-book-form">
+      <h3>Add a New Book</h3>
+      <form>
+        <div>
+          <label for="title">Title of the Book:</label>
+          <input type="text" id="title" name="title">
+        </div>
+        <div>
+          <label for="author">Author:</label>
+          <input type="text" id="author" name="author">
+        </div>
+        <div>
+          <label for="subject">Subject:</label>
+          <input type="text" id="subject" name="subject">
+        </div>
+        <div>
+          <label for="publish-date">Publish Date:</label>
+          <input type="text" id="publish-date" name="publish-date">
+        </div>
+        <div>
+          <button type="submit">Add Book</button>
+        </div>
+      </form>
+    </div>
+    
+    <div class="admin-features">
+      <h2>Admin Features</h2>
+      <ul>
+        <li><a href="">View Books</a></li>
+        <li><a href="">Edit Book Details</a></li>
+        <li><a href="">Delete Book</a></li>
+        <li><a href="">Manage Users</a></li>
+        <li><a href="">Generate Reports</a></li>
+      </ul>
+    </div>
+    
+  </div>
+</body>
+</html>

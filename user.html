@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Library Management - User Page</title>
+  <style>
+      body {
+      font-family: Arial, sans-serif;
+      background-image: url('images.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #ffffff4e;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      backdrop-filter: blur(0px);
+      margin-top: 50px;
+    }
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+    .book-list {
+      margin-top: 20px;
+      border-collapse: collapse;
+      width: 100%;
+    }
+    .book-list th,
+    .book-list td {
+      padding: 8px;
+      text-align: left;
+    }
+    .book-list th {
+      background-color: #f2f2f2;
+    }
+    .book-list tr:nth-child(even) {
+      background-color: #f9f9f9;
+    }
+    .book-list tr:hover {
+      background-color: #e9e9e9;
+    }
+    .filter-form {
+      margin-top: 20px;
+    }
+    .filter-form label {
+      font-weight: bold;
+      color: #333;
+    }
+    .filter-form input[type="text"],
+    .filter-form select {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      width: 750px;
+    }
+    .filter-form button {
+      padding: 6px 12px;
+      background-color: #4CAF50;
+      border: none;
+      color: #fff;
+      cursor: pointer;
+      border-radius: 3px;
+    }
+    .filter-form button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Book Details</h1>
+    
+    <div class="filter-form">
+      <form>
+        <label for="title">Title of the Book:</label>
+        <input type="text" id="title" name="title">
+        
+        <label for="author">Author:</label>
+        <input type="text" id="author" name="author">
+        
+        <label for="subject">Subject:</label>
+        <input type="text" id="subject" name="subject">
+        
+        <label for="publish-date">Publish Date:</label>
+        <input type="text" id="publish-date" name="publish-date">
+        
+        <button type="submit">Filter</button>
+      </form>
+    </div>
+    
+    <table class="book-list">
+      <thead>
+        <tr>
+          <th>Title</th>
+          <th>Author</th>
+          <th>Subject</th>
+          <th>Publish Date</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Code Complete</td>
+          <td>Steve McConnell</td>
+          <td>Programming</td>
+          <td>2023-05-15</td>
+        </tr>
+        <tr>
+            <td>Analog Electronics</td>
+            <td>L.K. MAHESWARI</td>
+            <td>Electronics</td>
+            <td>2022-08-25</td>
+          </tr>
+          <tr>
+            <td>Power System</td>
+            <td>C. L. Wadhwa</td>
+            <td>Electrical</td>
+            <td>2021-03-20</td>
+          </tr>
+          <tr>
+            <td> Clean Code</td>
+            <td>Robert C. Martin</td>
+            <td>Programming</td>
+            <td>2021-01-01</td>
+          </tr>
+          <tr>
+            <td>Electrical Machine</td>
+            <td>P. S. Bhimbra</td>
+            <td>Electrical</td>
+            <td>2020-10-10</td>
+          </tr>
+          <tr>
+            <td>Artificial Intelligence</td>
+            <td>Stuart Russell</td>
+            <td>Artificial Intelligence</td>
+            <td>2023-02-28</td>
+          </tr>
+          <tr>
+            <td>DSA in Python</td>
+            <td>H. Goldwasser</td>
+            <td>Computer Science</td>
+            <td>2022-09-10</td>
+          </tr>
+          <tr>
+            <td>Database Systems</td>
+            <td>Hector</td>
+            <td>Database Management</td>
+            <td>2021-07-15</td>
+          </tr>
+          <tr>
+            <td>Art of Electronics</td>
+            <td>Paul Horowitz</td>
+            <td>Electronics</td>
+            <td>2020-12-05</td>
+          </tr>
+          <tr>
+            <td>Operating System</td>
+            <td>B. Galvin</td>
+            <td>Operating Systems</td>
+            <td>2019-11-20</td>
+          </tr>
+  
+      </tbody>
+    </table>
+    
+  </div>
+</body>
+</html>
